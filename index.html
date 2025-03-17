@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="ta222222">
+  <title>ta222222 portfolio</title>
+  <link rel="icon" href="https://pbs.twimg.com/profile_images/1807798095373107200/J8xTQhtv_400x400.jpg" type="image/jpeg">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: 12px; 
+      line-height: 1.4;
+      color: black;
+      background: yellow;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      justify-content: space-between; 
+    }
+    .header a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.2s ease;
+      cursor: pointer;
+    }
+    .header a:hover {
+      color: red; 
+    }
+    .header {
+      padding: 20px; 
+      text-align: left;
+    }
+    .content {
+      padding-left: 20px; 
+      padding-right: 40px; 
+      max-width: 700px; 
+      margin-bottom: 20px; 
+      text-align: left;
+
+    }
+    .image-text-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      flex-direction: column;
+
+    }
+    .image-text-container img {
+      max-width: 500px; 
+      height: auto;
+
+    }
+    .image-text-container .text {
+      max-width: 500px; 
+    }
+  </style>
+  <script>
+    // Store your various content blocks in an array
+    const contentBlocks = [
+      // Block 1
+      `one way forward<br><br>
+      ever since i was a kid i've been a jit<br><br>
+      need to make more websites
+      `,
+      // Block 2
+      `
+        <div class="image-text-container">
+          <img src="https://i.redd.it/jq8ihkbw9py71.jpg" alt="laptop">
+          <div class="text">
+            london/la <br>
+            don't have a resume <br>
+            this is my portfolio <br>
+            <br> 
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            you can reach me on github, my username is ta222222 <br>
+          </div>
+        </div>
+      `,
+      // Block 3
+      `
+        <div class="image-text-container">
+          <img src="https://pbs.twimg.com/media/EJhHP9-U4AA8PJk.jpg" alt="sonic">
+          <div class="text">
+            "me on a cold day with my jacket open so you can see this fucking fit"
+          </div>
+        </div>
+      `
+    ];
+
+    // Keep track of the current index
+    let currentIndex = 0;
+
+    function toggleContent() {
+      // Select the content container
+      const contentDiv = document.querySelector('.content');
+      // Update to the next content block
+      currentIndex = (currentIndex + 1) % contentBlocks.length;
+      // Set the new content
+      contentDiv.innerHTML = contentBlocks[currentIndex];
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <a onclick="toggleContent()">ta222222</a>
+  </div>
+  <div class="content">
+    one way forward<br><br>
+    ever since i was a kid i've been a jit<br><br>
+    need to make more websites
+  </div>
+</body>
+</html>
